@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SQCHARTE APP</title>
+  <link rel="icon" type="image/png" href="./assets/LOGO_OFICIAL_SQCH.png" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <style>
+    /* brillo suave para logo */
+    @keyframes glow {
+      0%,100% { filter: drop-shadow(0 0 6px rgba(255,255,255,0.06)); transform: translateY(0); }
+      50% { filter: drop-shadow(0 0 16px rgba(255,255,255,0.12)); transform: translateY(-2px); }
+    }
+    .logo-brillante {
+      animation: glow 3s ease-in-out infinite;
+      width: 160px;
+      margin: 14px auto;
+      display: block;
+    }
+    body { margin:0; background: radial-gradient(circle at top, #000 60%, #111); color: #fff; font-family: Inter, system-ui, sans-serif; }
+  </style>
+</head>
+<body>
+  <div id="app-root">
+    <!-- Logo + título -->
+    <img src="./assets/LOGO_OFICIAL_SQCH.png" class="logo-brillante" alt="SQCharte Logo">
+
+    <header class="header">
+      <h1 class="title"><span class="text-yellow">SQ</span><span class="text-red">CHARTE</span><span class="text-green"> APP</span></h1>
+    </header>
+
+    <!-- Contenedor principal: la app se inyecta aquí -->
+    <main id="root"></main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <p>Creadora: <strong>Vivian Latorre</strong></p>
+    </footer>
+  </div>
+
+  <!-- script principal -->
+  <script type="module" src="./assets/bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+/* Minimal Tailwind-like helpers + styles used by the script */
+* { box-sizing: border-box; }
+html,body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: linear-gradient(180deg, #000 0%, #070707 100%);
+  color: #fff;
+}
+
+/* Header / Title */
+.header { text-align:center; padding: 8px 12px; }
+.title { font-size: 28px; font-weight: 800; letter-spacing: 1px; margin: 0; }
+.text-yellow { color: #facc15; }
+.text-red { color: #ef4444; margin-left: 6px; }
+.text-green { color: #4ade80; margin-left: 6px; }
+
+/* Main container */
+#root { max-width: 920px; margin: 18px auto; padding: 12px; }
+
+/* Card styles */
+.card { background: linear-gradient(180deg, rgba(8,8,8,0.85), rgba(14,14,14,0.9)); border-radius: 12px; padding: 16px; border: 3px solid rgba(250,200,24,0.12); box-shadow: 0 8px 30px rgba(0,0,0,0.6); }
+
+/* Video area */
+.video-wrap { background: #000; border-radius: 12px; overflow: hidden; position: relative; width: 100%; aspect-ratio: 16/9; display:flex; align-items:center; justify-content:center; }
+.video-wrap video { width:100%; height:100%; object-fit:cover; }
+
+/* Overlay states */
+.overlay-detected { position: absolute; inset: 0; display:flex; align-items:center; justify-content:center; pointer-events:none; }
+.detect-box { background: rgba(34,197,94,0.16); padding:12px 18px; border-radius:10px; font-weight:800; }
+
+/* Buttons */
+.controls { display:flex; gap:12px; margin-top:12px; }
+.btn {
+  flex:1;
+  padding:14px 18px;
+  border-radius:10px;
+  border:none;
+  font-weight:700;
+  cursor:pointer;
+}
+.btn-green { background: linear-gradient(90deg,#22c55e,#16a34a); color:#fff; }
+.btn-red { background: linear-gradient(90deg,#ef4444,#dc2626); color:#fff; }
+.btn-blue { background:#2563eb; color:#fff; }
+
+/* Start overlay button (large) */
+.start-overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)); z-index:900; }
+.start-btn {
+  padding: 16px 28px; border-radius: 14px; font-size:18px; font-weight:900; cursor:pointer; background: linear-gradient(90deg,#22c55e,#3b82f6); color:#fff; border:none;
+}
+
+/* Footer */
+.footer { position:fixed; bottom:8px; left:0; right:0; text-align:center; font-size:13px; opacity:0.9; }
